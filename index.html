@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lianne Blaize Acebo | Romance Ghostwriter & Series Author</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fff1f2',
+                            100: '#ffe4e6',
+                            200: '#fecdd3',
+                            500: '#f43f5e',
+                            700: '#be185d',
+                            800: '#9f1239',
+                            900: '#881337',
+                            950: '#4c0519',
+                        },
+                        dark: {
+                            900: '#0f172a',
+                            950: '#090d16',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        cinzel: ['Cinzel', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #be185d;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="bg-dark-950 text-slate-200 font-sans antialiased selection:bg-brand-700 selection:text-white">
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-brand-900 text-white px-5 py-3 rounded-xl shadow-2xl border border-brand-700/50 flex items-center space-x-3 pointer-events-none">
+        <svg class="w-5 h-5 text-rose-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+        <span id="toast-message" class="text-sm font-medium">Link copied to clipboard!</span>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 backdrop-blur-md bg-dark-950/80 border-b border-slate-800/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="font-cinzel text-xl sm:text-2xl font-bold tracking-wider text-rose-100 hover:text-brand-200 transition">
+                LIANNE BLAIZE ACEBO
+            </a>
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-rose-400 transition">About</a>
+                <a href="#competencies" class="hover:text-rose-400 transition">Tropes & Skills</a>
+                <a href="#samples" class="hover:text-rose-400 transition">Writing Samples</a>
+                <a href="#profiles" class="hover:text-rose-400 transition">Author Profiles</a>
+            </nav>
+            <div class="flex items-center space-x-3">
+                <button onclick="copyPortfolioUrl()" class="hidden sm:inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-slate-800/90 hover:bg-slate-700 border border-slate-700 text-xs font-semibold text-rose-200 transition">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                    <span>Copy Portfolio Link</span>
+                </button>
+                <a href="https://www.inkitt.com/Opiumxx" target="_blank" class="inline-flex items-center px-4 py-2 rounded-lg bg-brand-800 hover:bg-brand-700 text-xs font-bold text-white tracking-wide shadow-lg shadow-brand-950/50 transition">
+                    Inkitt Profile
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden pt-16 pb-20 lg:pt-24 lg:pb-28">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-950/40 via-dark-950 to-dark-950 pointer-events-none"></div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-950/80 border border-brand-800/60 text-brand-200 text-xs font-medium mb-6">
+                    <span class="w-2 h-2 rounded-full bg-rose-400 animate-pulse"></span>
+                    <span>Available for Inkitt Series Ghostwriting &amp; Story Development</span>
+                </div>
+                <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-slate-100 leading-tight">
+                    Crafting Hook-Driven <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-300 via-rose-400 to-brand-500">Romance Series</span> That Keep Readers Reading.
+                </h1>
+                <p class="mt-6 text-lg text-slate-300 leading-relaxed font-light">
+                    Romance Ghostwriter and Series Author pairing deep trope fluency with narrative quality assurance, reader drop-off analytics, and collaborative agentic AI workflows.
+                </p>
+                
+                <!-- Author Profiles Badges -->
+                <div id="profiles" class="mt-6 pt-4 border-t border-slate-800/80 flex flex-wrap items-center gap-3">
+                    <span class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Author Links:</span>
+                    <a href="https://www.wattpad.com/user/Opiumxx" target="_blank" class="px-3.5 py-1.5 rounded-lg bg-orange-950/60 hover:bg-orange-900/80 border border-orange-700/60 text-orange-200 text-xs font-medium transition flex items-center space-x-1.5">
+                        <span class="font-bold">Wattpad</span>
+                        <span class="text-orange-400">@Opiumxx</span>
+                    </a>
+                    <a href="https://www.inkitt.com/Opiumxx" target="_blank" class="px-3.5 py-1.5 rounded-lg bg-rose-950/60 hover:bg-rose-900/80 border border-rose-700/60 text-rose-200 text-xs font-medium transition flex items-center space-x-1.5">
+                        <span class="font-bold">Inkitt</span>
+                        <span class="text-rose-400">@Opiumxx</span>
+                    </a>
+                    <a href="https://www.tiktok.com/@lei.oxx" target="_blank" class="px-3.5 py-1.5 rounded-lg bg-pink-950/60 hover:bg-pink-900/80 border border-pink-700/60 text-pink-200 text-xs font-medium transition flex items-center space-x-1.5">
+                        <span class="font-bold">TikTok</span>
+                        <span class="text-pink-400">@lei.oxx</span>
+                    </a>
+                    <a href="http://linkedin.com/in/lianneblaize" target="_blank" class="px-3.5 py-1.5 rounded-lg bg-sky-950/60 hover:bg-sky-900/80 border border-sky-700/60 text-sky-200 text-xs font-medium transition flex items-center space-x-1.5">
+                        <span class="font-bold">LinkedIn</span>
+                        <span class="text-sky-400">lianneblaize</span>
+                    </a>
+                </div>
+
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <a href="#samples" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-brand-800 to-brand-700 hover:from-brand-700 hover:to-brand-600 text-white font-semibold text-sm shadow-xl shadow-brand-950/60 transition transform hover:-translate-y-0.5">
+                        Read Writing Samples
+                    </a>
+                    <a href="mailto:lianneblaizeacebo@gmail.com" class="px-6 py-3.5 rounded-xl bg-slate-800/80 hover:bg-slate-700 border border-slate-700 text-slate-200 font-semibold text-sm transition">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Profile -->
+    <section id="about" class="py-16 bg-slate-900/50 border-y border-slate-800/60">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-5">
+                    <div class="relative">
+                        <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-brand-700 to-rose-400 opacity-30 blur-lg"></div>
+                        <div class="relative bg-slate-900 p-8 rounded-2xl border border-slate-800 shadow-2xl">
+                            <h3 class="font-cinzel text-lg font-bold text-rose-200 mb-2">QUICK PROFILE</h3>
+                            <div class="space-y-4 text-sm text-slate-300">
+                                <div>
+                                    <span class="text-slate-500 block text-xs">Role Focus</span>
+                                    <span class="font-semibold text-slate-100">Romance Ghostwriter / Fiction Series Author</span>
+                                </div>
+                                <div>
+                                    <span class="text-slate-500 block text-xs">Core Tropes</span>
+                                    <span class="font-semibold text-slate-100">Enemies to Lovers, Billionaire, Shifters, Fake Dating, Dark Romance</span>
+                                </div>
+                                <div>
+                                    <span class="text-slate-500 block text-xs">Workflow</span>
+                                    <span class="font-semibold text-slate-100">Agentic AI Story Ideation + Quality Audit</span>
+                                </div>
+                                <div>
+                                    <span class="text-slate-500 block text-xs">Academic Background</span>
+                                    <span class="font-semibold text-slate-100">AB Psychology (In Progress)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-7 space-y-6">
+                    <h2 class="font-serif text-3xl font-bold text-slate-100">
+                        Bridging Story Emotion with Analytical Series Execution
+                    </h2>
+                    <p class="text-slate-300 leading-relaxed">
+                        My writing approach combines genuine passion for romance storytelling with rigorous quality control. Background in Certified Quality Auditing and Psychology provides me with a unique lens for reader psychology. I analyze why readers stay glued to pages, where drop-off risks occur, and how to structure chapter hooks that drive serialized engagement.
+                    </p>
+                    <p class="text-slate-300 leading-relaxed">
+                        Whether iterating on concepts using agentic AI tools or maintaining multi-book lore continuity, I bring zero-ego collaboration, strict deadline adherence, and rapid adaptation to house style.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Competencies & Tropes Grid -->
+    <section id="competencies" class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <h2 class="font-cinzel text-3xl font-bold text-slate-100">Trope Fluency &amp; Capabilities</h2>
+                <p class="text-slate-400 mt-3 text-sm">Engineered for high-retention serialized fiction platforms.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-brand-800/60 transition group">
+                    <div class="w-10 h-10 rounded-xl bg-brand-950 border border-brand-800/60 flex items-center justify-center text-rose-400 mb-4 group-hover:scale-110 transition">
+                        ♥
+                    </div>
+                    <h3 class="font-semibold text-slate-100 text-lg mb-2">High-Demand Romance Tropes</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Fluent in Enemies-to-Lovers, Fake Dating, Second Chance, Rivals, Billionaires, Shifters, and Dark Romance dynamics.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-brand-800/60 transition group">
+                    <div class="w-10 h-10 rounded-xl bg-brand-950 border border-brand-800/60 flex items-center justify-center text-rose-400 mb-4 group-hover:scale-110 transition">
+                        ⚡
+                    </div>
+                    <h3 class="font-semibold text-slate-100 text-lg mb-2">Agentic AI Story Workflows</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Adept at using LLM story development tools to rapidly brainstorm outlines, expand worldbuilding, and refine plot beats.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-brand-800/60 transition group">
+                    <div class="w-10 h-10 rounded-xl bg-brand-950 border border-brand-800/60 flex items-center justify-center text-rose-400 mb-4 group-hover:scale-110 transition">
+                        ⚓
+                    </div>
+                    <h3 class="font-semibold text-slate-100 text-lg mb-2">Pacing, Hooks &amp; Cliffhangers</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Writing for reader retention rather than prizes. Every chapter opens with purpose and closes with compelling stakes.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-brand-800/60 transition group">
+                    <div class="w-10 h-10 rounded-xl bg-brand-950 border border-brand-800/60 flex items-center justify-center text-rose-400 mb-4 group-hover:scale-110 transition">
+                        📚
+                    </div>
+                    <h3 class="font-semibold text-slate-100 text-lg mb-2">Multi-Book Series Continuity</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Meticulous tracking of character arcs, world rules, and timeline details across extended multi-book releases.
+                    </p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-brand-800/60 transition group">
+                    <div class="w-10 h-10 rounded-xl bg-brand-950 border border-brand-800/60 flex items-center justify-center text-rose-400 mb-4 group-hover:scale-110 transition">
+                        📊
+                    </div>
+                    <h3 class="font-semibold text-slate-100 text-lg mb-2">Audience Drop-Off Analytics</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Curiosity and awareness regarding where readers pause, comment trends, and pacing adjustments needed for retention.
+                    </p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-brand-800/60 transition group">
+                    <div class="w-10 h-10 rounded-xl bg-brand-950 border border-brand-800/60 flex items-center justify-center text-rose-400 mb-4 group-hover:scale-110 transition">
+                        ✨
+                    </div>
+                    <h3 class="font-semibold text-slate-100 text-lg mb-2">Zero-Ego Feedback Cycle</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Quickly adapting to house tone guidelines, editorial revisions, and heat level requirements while maintaining native-level English.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Writing Samples Section -->
+    <section id="samples" class="py-20 bg-slate-900/40 border-t border-slate-800/80">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <h2 class="font-cinzel text-3xl font-bold text-slate-100">Romance Writing Samples</h2>
+                <p class="text-slate-400 mt-2 text-sm">Interactive reader preview featuring opening chapter hooks and cliffhangers.</p>
+            </div>
+
+            <!-- Tab Switcher -->
+            <div class="flex justify-center mb-8">
+                <div class="bg-slate-900 p-1.5 rounded-xl border border-slate-800 inline-flex space-x-2">
+                    <button id="tab1-btn" onclick="switchTab(1)" class="px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition bg-brand-800 text-white shadow">
+                        Sample 1: Billionaire Enemies-to-Lovers
+                    </button>
+                    <button id="tab2-btn" onclick="switchTab(2)" class="px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition text-slate-400 hover:text-slate-200">
+                        Sample 2: Shifter Cliffhanger
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sample 1 Content Container -->
+            <div id="sample-1" class="bg-slate-900 rounded-2xl border border-slate-800 shadow-2xl overflow-hidden">
+                <div class="px-6 py-4 bg-slate-950/80 border-b border-slate-800 flex items-center justify-between">
+                    <div>
+                        <span class="text-xs font-semibold text-rose-400 uppercase tracking-wider block">Opening Chapter Excerpt</span>
+                        <h3 class="text-base font-bold text-slate-100">The Marriage Clause | Contemporary Billionaire Romance</h3>
+                    </div>
+                    <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700">Tension Level: High</span>
+                </div>
+                <div class="p-6 sm:p-8 space-y-4 font-serif text-slate-300 text-base leading-relaxed max-h-[500px] overflow-y-auto custom-scrollbar">
+                    
+                    <p class="font-semibold text-slate-100">Chapter 1</p>
+
+                    <p>The invitation was heavy, gilded, and smelled offensively of bergamot and old money.</p>
+
+                    <p>Julian Thorne did not invite people to dinner. He summoned them. And after three years of watching him aggressively outbid my firm for every boutique real estate developer on the East Coast, the last place I wanted to sit was across from his mahogany table.</p>
+
+                    <p>"You look like you are preparing for a court trial, Nora," my assistant, Chloe, whispered as she smoothed the lapel of my tailored ivory blazer.</p>
+
+                    <p>"Worse," I replied, checking my lipstick in the elevator glass. "I am preparing to smile at a snake for two hours without breaking a glass."</p>
+
+                    <p>The elevator chimed, depositing me on the penthouse floor of The Grand Regent. The dining hall was dimly lit, designed with rich leather, warm brass, and floor-to-ceiling glass overlooking the Manhattan skyline.</p>
+
+                    <p>And there he sat.</p>
+
+                    <p>Julian Thorne was wearing a charcoal suit with the top button unfastened, his dark hair pushed back with effortless carelessness. He held a crystal glass of amber liquid, his gray eyes catching mine the second I stepped out of the foyer. He did not smile. He simply watched me approach, calculating every step as if estimating the market value of my stride.</p>
+
+                    <p>"Miss Vance," he said, his voice a low, gravelly baritone that vibrated against the back of my neck. He stood up, towering over the table. "You are four minutes late."</p>
+
+                    <p>"The traffic on Madison was atrocious, Mr. Thorne," I said, taking the seat across from him before his maître d' could even pull out the chair for me. "Though I am sure you could have bought the street and cleared it if it bothered you that much."</p>
+
+                    <p>A faint, almost imperceptible twitch caught the corner of his mouth. "Punctuality is a sign of respect. But I suppose we both know why you are here, and respect has little to do with it."</p>
+
+                    <p>"I am here because your board requested a joint merger presentation for the Sterling Account," I reminded him, leaning back and resting my hands on the white tablecloth. "Nothing more."</p>
+
+                    <p>Julian leaned forward, setting his glass down with a quiet, deliberate tap. "The board requested a presentation. But I requested <em>you</em>."</p>
+
+                    <p>My pulse hiccuped. I forced my expression to remain flat. "Excuse me?"</p>
+
+                    <p>"My father's trust clause activates in thirty days," Julian said, his gaze locking onto mine with alarming intensity. "He specified that the controlling shares of Thorne Global will only transfer to me if I am legally engaged to a long-term strategic partner. Someone respected in the industry. Someone immune to public scandal."</p>
+
+                    <p>I let out a dry, incredulous laugh. "And you think <em>I</em> am going to write your press release?"</p>
+
+                    <p>"No," Julian said softly, his gray eyes cutting straight through me. "I want you to marry me."</p>
+                </div>
+            </div>
+
+            <!-- Sample 2 Content Container -->
+            <div id="sample-2" class="bg-slate-900 rounded-2xl border border-slate-800 shadow-2xl overflow-hidden hidden">
+                <div class="px-6 py-4 bg-slate-950/80 border-b border-slate-800 flex items-center justify-between">
+                    <div>
+                        <span class="text-xs font-semibold text-rose-400 uppercase tracking-wider block">Mid-Series Chapter Ending</span>
+                        <h3 class="text-base font-bold text-slate-100">Bound by Blood | Paranormal Shifter Romance</h3>
+                    </div>
+                    <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700">Tension Level: Peak Cliffhanger</span>
+                </div>
+                <div class="p-6 sm:p-8 space-y-4 font-serif text-slate-300 text-base leading-relaxed max-h-[500px] overflow-y-auto custom-scrollbar">
+
+                    <p class="font-semibold text-slate-100">Chapter 14 (Excerpt Ending)</p>
+
+                    <p>The forest was silent, save for the crunch of pine needles beneath my boots.</p>
+
+                    <p>I clutched the silver vial against my ribs, the cool metal burning through the fabric of my jacket. Three miles to the border. If I could cross the river before the moon reached its peak, the Silverwood Pack would never track the scent of the stolen cure.</p>
+
+                    <p>A low, guttural growl vibrated through the earth beneath my feet.</p>
+
+                    <p>I froze.</p>
+
+                    <p>The shadows between the ancient oaks shifted. Out stepped an enormous jet-black wolf, his shoulders broader than an iron gate, his golden eyes glowing in the moonlight. Blood dripped from his left flank, but his stance was steady, lethal, and unmistakable.</p>
+
+                    <p>Devren.</p>
+
+                    <p>My breath hitched in my throat. He was not supposed to be here. He was supposed to be leading the perimeter patrol five miles north.</p>
+
+                    <p>The wolf shifted. The horrific sound of bones cracking and snapping filled the quiet glade as he took human form. Devren stood before me in the moonlight, chest heaving, bare skin covered in fresh mud and crimson streaks.</p>
+
+                    <p>"You took it," Devren rasped, his voice raw from the shift. He took a heavy step toward me, his golden eyes blazing with a dangerous mix of betrayal and sheer primal fury.</p>
+
+                    <p>"Devren, please," I whispered, stepping back until my spine hit the cold bark of a hemlock tree. "You don't understand what they're going to do to him. I had to."</p>
+
+                    <p>"You lied to me," he growled, closing the distance between us in a single terrifying stride. He pinned his hand against the tree right beside my ear, trapping me in his heat. His scent of cedar, rain, and ozone flooded my senses, making my wolf howl inside my chest. "Every kiss. Every night in my bed. Was all of it just a distraction?"</p>
+
+                    <p>"No," I choked out, tears stinging the backs of my eyes. "Devren, I love you."</p>
+
+                    <p>"Then drop the vial," he ordered, his eyes flashing wolf-gold.</p>
+
+                    <p>My fingers tightened around the silver cylinder. I looked into the eyes of the man I loved, and then at the river roaring just fifty yards behind him.</p>
+
+                    <p>"I'm sorry," I whispered.</p>
+
+                    <p>Before he could react, I smashed the glass smoke-pellet at my feet. A blinding white cloud erupted between us. Devren roared in fury as I turned and sprinted toward the cliff edge, diving headfirst into the freezing black rapids below.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Footer -->
+    <footer id="contact" class="py-16 bg-slate-950 border-t border-slate-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-cinzel text-2xl font-bold text-slate-100 mb-3">Lianne Blaize Acebo</h2>
+            <p class="text-sm text-slate-400 mb-6">Romance Ghostwriter &amp; Series Fiction Author</p>
+            <div class="flex flex-wrap justify-center items-center gap-4 text-sm mb-6">
+                <a href="https://www.wattpad.com/user/Opiumxx" target="_blank" class="text-orange-400 hover:text-orange-300 font-medium transition">Wattpad (@Opiumxx)</a>
+                <span class="text-slate-700">|</span>
+                <a href="https://www.inkitt.com/Opiumxx" target="_blank" class="text-rose-400 hover:text-rose-300 font-medium transition">Inkitt (@Opiumxx)</a>
+                <span class="text-slate-700">|</span>
+                <a href="https://www.tiktok.com/@lei.oxx" target="_blank" class="text-pink-400 hover:text-pink-300 font-medium transition">TikTok (@lei.oxx)</a>
+                <span class="text-slate-700">|</span>
+                <a href="http://linkedin.com/in/lianneblaize" target="_blank" class="text-sky-400 hover:text-sky-300 font-medium transition">LinkedIn Profile</a>
+                <span class="text-slate-700">|</span>
+                <a href="mailto:lianneblaizeacebo@gmail.com" class="text-slate-300 hover:text-white font-medium transition">lianneblaizeacebo@gmail.com</a>
+            </div>
+            <div class="text-xs text-slate-600">
+                Designed for Inkitt Freelance Ghostwriter &amp; Series Author Application
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Script -->
+    <script>
+        function switchTab(tabNum) {
+            const tab1Btn = document.getElementById('tab1-btn');
+            const tab2Btn = document.getElementById('tab2-btn');
+            const sample1 = document.getElementById('sample-1');
+            const sample2 = document.getElementById('sample-2');
+
+            if (tabNum === 1) {
+                sample1.classList.remove('hidden');
+                sample2.classList.add('hidden');
+
+                tab1Btn.className = 'px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition bg-brand-800 text-white shadow';
+                tab2Btn.className = 'px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition text-slate-400 hover:text-slate-200';
+            } else {
+                sample1.classList.add('hidden');
+                sample2.classList.remove('hidden');
+
+                tab2Btn.className = 'px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition bg-brand-800 text-white shadow';
+                tab1Btn.className = 'px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition text-slate-400 hover:text-slate-200';
+            }
+        }
+
+        function copyPortfolioUrl() {
+            const dummy = document.createElement('input');
+            document.body.appendChild(dummy);
+            dummy.value = window.location.href;
+            dummy.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummy);
+
+            const toast = document.getElementById('toast');
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
